@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For mariyamm❤️</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #ffe4ec, #fff8f0);
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      overflow-x: hidden;
+    }
+
+    h1 {
+      margin-top: 40px;
+      font-size: 2.5rem;
+      color: #e63946;
+    }
+
+    p {
+      font-size: 1.2rem;
+      color: #333;
+    }
+
+    .gallery {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin: 30px auto;
+      gap: 15px;
+      max-width: 800px;
+    }
+
+    .gallery img {
+      width: 180px;
+      height: 240px;
+      object-fit: cover;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    .notes {
+      margin: 40px auto;
+      max-width: 700px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+    }
+
+    .note {
+      background: #fff;
+      padding: 15px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      font-size: 1rem;
+      color: #444;
+      transition: transform 0.2s;
+    }
+
+    .note:hover {
+      transform: translateY(-5px);
+    }
+
+    .heart-button {
+      margin: 40px;
+      font-size: 1.2rem;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 30px;
+      background: #e63946;
+      color: white;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .heart-button:hover {
+      background: #c91d2a;
+    }
+
+    #compliment {
+      margin-top: 20px;
+      font-size: 1.3rem;
+      color: #222;
+      min-height: 30px;
+    }
+
+    footer {
+      margin: 50px 0;
+      font-size: 0.9rem;
+      color: #777;
+    }
+
+    /* Floating hearts */
+    .heart {
+      position: fixed;
+      bottom: 0;
+      font-size: 24px;
+      color: #e63946;
+      animation: floatUp 6s linear infinite;
+      pointer-events: none;
+    }
+
+    @keyframes floatUp {
+      from { transform: translateY(0); opacity: 1; }
+      to { transform: translateY(-100vh); opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+  <h1>for meri jaan mariyamm❤️</h1>
+  <p>you’re the most beautiful part of my world and this little corner of the internet is just for you.</p>
+
+  <div class="gallery">
+    <!-- Replace with your photos -->
+    <img src="D:/mrym/images/mariyammYellow1.jpg" alt="mariyammYellow1">
+    <img src="D:\mrym\images\mariyammSmileswPrettyTeeth.jpg" alt="mariyammSmileswPrettyTeeth">
+    <img src="D:\mrym\images\mariyammCloseupEyes.jpg" alt="mariyammCloseupEyes">
+    <img src="D:\mrym\images\mariyammPixelArt.jpg" alt="mariyammPixelArt">
+  </div>
+
+  <h2>little things i love about you 💌(this section will keep getting updated hehe)</h2>
+  <div class="notes">
+    <div class="note">Your smile makes everything better.</div>
+    <div class="note">I love how your eyes light up when you laugh.</div>
+    <div class="note">You make ordinary days feel magical.</div>
+    <div class="note">You inspire me to be my best self.</div>
+  </div>
+
+  <button class="heart-button" onclick="showCompliment()">💖 Click me 💖</button>
+  <div id="compliment"></div>
+
+  <footer>
+    Made with khoob saara pyaar for loveo'mine 🌹
+  </footer>
+
+  <script>
+    const compliments = [
+      "you're my favorite and will always be mwaaah <3",
+      "youreeeee so pyaari mai aapko kha jauuuuuuu",
+      "i love how when you smile with that little tilt on one side and your eyes brighten up and dimples appear, it feels like like a heavenly breeze in scorching sun, mwaaaah",
+      "when i see your winter pictures clicked in front of winter sun or heater light, it feels like god made this season just for you",
+      "you're my peace and home",
+      "when your face glows in a red outfit, it feels like rose gold can be natural",
+      "it's absolutely unreal how you manage to look godly in the most godawful filters out there, mwaaah",
+      "it's astonishing how unaware you are of how divine you are",
+      "you make me change into a better person each and every day, iloveyou"
+    ];
+
+    function showCompliment() {
+      const random = compliments[Math.floor(Math.random() * compliments.length)];
+      document.getElementById("compliment").innerText = random;
+    }
+
+    // Floating hearts
+    function createHeart() {
+      const heart = document.createElement("div");
+      heart.className = "heart";
+      heart.innerText = "❤️";
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.animationDuration = (3 + Math.random() * 5) + "s";
+      document.body.appendChild(heart);
+
+      setTimeout(() => heart.remove(), 6000);
+    }
+
+    setInterval(createHeart, 700);
+  </script>
+</body>
+</html>
